@@ -28,6 +28,8 @@ npm run dev
 
 Open [http://localhost:5173/](http://localhost:5173/) with your browser to see the result.
 
+or you can view here [https://ecommerce-catalog-phi.vercel.app/](https://ecommerce-catalog-phi.vercel.app/)
+
 ## Note:
 
 This Catalog Made with fake api [https://fakestoreapi.com/](https://fakestoreapi.com/)
