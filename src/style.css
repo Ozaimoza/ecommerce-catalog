@@ -1,0 +1,172 @@
+/* ----- Global ----- */
+
+body {
+  font-family: "Gill Sans", sans-serif;
+  background-color: white;
+  height: 100vh;
+  margin: 0;
+}
+
+hr {
+  border: none;
+  height: 0.5px;
+  color: #333;
+  background-color: #333;
+}
+
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* ----- Product Section ----- */
+
+.background-woman {
+  /* width: 100vw; */
+  height: 428px;
+  background-color: #fde2ff;
+}
+.background-man {
+  /* width: 100vw; */
+  height: 428px;
+  background-color: #d6e6ff;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.repeating-image {
+  width: 100%;
+  height: auto;
+  object-fit: repeat;
+}
+
+.product {
+  display: flex;
+  gap: 5px;
+  margin: auto;
+  width: 1034px;
+  height: 580px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+
+  /* Menengahkan elemen secara horizontal dan vertikal */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title-man {
+  color: #002772;
+}
+.title-woman {
+  color: #720060;
+}
+
+.product .image {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.product .image img {
+  width: 301px;
+  height: 383px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.product .content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%; /* Atau 100vw, sesuai kebutuhan */
+  max-height: 548px;
+  padding: 50px;
+  padding-left: 0;
+}
+.product .content .category {
+  display: flex;
+  justify-content: space-between;
+}
+.product .content .description {
+  padding-top: 20px;
+  height: full;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.button-man1 {
+  width: 259px;
+  height: 42px;
+  background-color: #002772;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button-man2 {
+  width: 259px;
+  height: 42px;
+  background-color: white;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 4px;
+  color: #002772;
+  border-color: #002772;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button-woman1 {
+  width: 259px;
+  height: 42px;
+  background-color: #720060;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button-woman2 {
+  width: 259px;
+  height: 42px;
+  background-color: white;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 4px;
+  color: #720060;
+  border-color: #720060;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
