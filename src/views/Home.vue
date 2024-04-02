@@ -8,12 +8,25 @@ import axios from 'axios';
 
 // Define a reactive variable to track loading state
 let data = ref(null);
+let length = ref(null);
 
-const fetchData = async (page) => {
+const fetchData = async()=>{
+    try {
+        const response = await axios.get(`https://fakestoreapi.com/products/`);
+        length.value = response.data.length
+        // console.log(typeof(response.data.length))
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+fetchData();
+
+const fetchDataById = async (page) => {
     try {
         const response = await axios.get(`https://fakestoreapi.com/products/${page}`);
         data.value = response.data;
-        console.log(data)
+        
+        // console.log(data)
     } catch (error) {
         console.error('Error fetching data:', error);
     }
@@ -22,18 +35,19 @@ const fetchData = async (page) => {
 
 // page
 let page = 1
-const nextPage = () => {
-    if (page === 20){
+const nextPage = async() => {
+    if (page === length.value){
         page = 1
     } else{
-        
         page++
+        // console.log(page)
     }
     data.value = null;
-    fetchData(page); // Fetch new data for the next product
+    fetchDataById(page); // Fetch new data for the next product
 }
 
-fetchData(page);
+fetchDataById(page);
+
 </script>
 
 <template>
